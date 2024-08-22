@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MyRect.cpp
         Bullet.h
         Bullet.cpp
+        Enemies.h
+        Enemies.cpp
 
 
     )
