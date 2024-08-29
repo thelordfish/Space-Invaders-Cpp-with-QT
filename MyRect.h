@@ -10,6 +10,5 @@ class MyRect : public QObject, public QGraphicsRectItem
 public:
     void keyPressEvent(QKeyEvent *event) override;
 public slots:
-    void spawn();
 };
 #endif // MYRECT_H
