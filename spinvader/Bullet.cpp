@@ -14,6 +14,8 @@ Bullet::Bullet()
     //drew the bullet
     setRect(0,0,10,50);
 
+
+
     //connect
     QTimer* timer = new QTimer();
 

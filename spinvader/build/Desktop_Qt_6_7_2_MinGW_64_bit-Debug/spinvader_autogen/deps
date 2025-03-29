@@ -56,6 +56,7 @@ spinvader_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qmargins.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qmath.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qmetacontainer.h \
+	C:/Qt/6.7.2/mingw_64/include/QtCore/qmetaobject.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qmetatype.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qminmax.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qnamespace.h \
@@ -111,6 +112,7 @@ spinvader_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qtversionchecks.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qtypeinfo.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qtypes.h \
+	C:/Qt/6.7.2/mingw_64/include/QtCore/qurl.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -146,6 +148,16 @@ spinvader_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/QAudioOutput \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/QMediaPlayer \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qaudio.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qaudiooutput.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qmediaplayer.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtaudio.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+	C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsRectItem \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsTextItem \
@@ -271,6 +283,48 @@ spinvader_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake \
+	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
 	C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake \
@@ -544,9 +598,12 @@ spinvader_autogen/timestamp: \
 	C:/Users/Ollie\ Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/moc_predefs.h \
 	C:/Users/Ollie\ Appleby/projects/spinvader/game.cpp \
 	C:/Users/Ollie\ Appleby/projects/spinvader/game.h \
+	C:/Users/Ollie\ Appleby/projects/spinvader/health.cpp \
+	C:/Users/Ollie\ Appleby/projects/spinvader/health.h \
 	C:/Users/Ollie\ Appleby/projects/spinvader/main.cpp \
 	C:/Users/Ollie\ Appleby/projects/spinvader/mainwindow.cpp \
 	C:/Users/Ollie\ Appleby/projects/spinvader/mainwindow.h \
+	C:/Users/Ollie\ Appleby/projects/spinvader/res.qrc \
 	C:/Users/Ollie\ Appleby/projects/spinvader/score.cpp \
 	C:/Users/Ollie\ Appleby/projects/spinvader/score.h \
 	C:/Users/Ollie\ Appleby/projects/spinvader/mainwindow.ui \

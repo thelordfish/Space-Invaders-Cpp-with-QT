@@ -4,8 +4,11 @@
 #include "qgraphicsview.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QMediaPlayer>
 #include <QObject>
 #include "Score.h"
+#include "health.h"
+#include <QAudioOutput>
 
 
 class Game : public QGraphicsView{
@@ -16,12 +19,16 @@ class Game : public QGraphicsView{
 public:
     Game();
     Score* score;
+    Health* health;
+
 public slots:
     void Spawn();
 
 private:
     QGraphicsScene* scene = new QGraphicsScene(this);
     QGraphicsView* view = new QGraphicsView(this);
+    QMediaPlayer* music = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
 
 };
 

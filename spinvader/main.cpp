@@ -4,11 +4,7 @@
 #include <QTimer>
 #include "game.h"
 
-/*
- *-QTimer
- *-signals and slots (connect function)
- */
-//@@ -19,26 +21,43 @@
+
 
 Game* game;
 

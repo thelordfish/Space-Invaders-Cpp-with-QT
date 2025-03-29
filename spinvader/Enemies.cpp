@@ -2,8 +2,11 @@
 #include <QDebug>
 #include <QGraphicsScene>
 #include <QTimer>
+#include "game.h"
 
-                                                        Enemy::Enemy()
+extern Game* game;
+
+Enemy::Enemy()
 {
     //set random position
     int random_number = rand() % 700;
@@ -25,9 +28,16 @@ void Enemy::move()
     //move enemy down
     setPos(x(), y() + 5);
     //delete enemy once it's off the screen:
-    if (pos().y() + rect().height() < 0) {
+    if (pos().y() + rect().height() > 700) {
+       // qDebug() << "health should decrease";
+
+        //decrease health
+        game->health->decrease();
+       // qDebug() << "health should decrease";
+
+
         scene()->removeItem(this);
         delete this;
-        //qDebug() << "Enemy deleted";
+       // qDebug() << "Enemy deleted";
     }
 }

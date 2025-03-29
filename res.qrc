@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/new/sounds">
-        <file>Sounds/neutral.mp3</file>
-        <file>Sounds/enemy.mp3</file>
-        <file>Sounds/wolololo.mp3</file>
-        <file>Sounds/theme.mp3</file>
-    </qresource>
-</RCC>

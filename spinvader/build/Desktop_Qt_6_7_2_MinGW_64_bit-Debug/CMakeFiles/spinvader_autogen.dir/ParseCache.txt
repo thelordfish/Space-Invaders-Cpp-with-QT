@@ -681,6 +681,7 @@ C:/Users/Ollie Appleby/projects/spinvader/Bullet.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/Ollie Appleby/projects/spinvader/Bullet.h
  mdp:C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/moc_predefs.h
+C:/Users/Ollie Appleby/projects/spinvader/health.h
 C:/Users/Ollie Appleby/projects/spinvader/Enemies.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QObject
@@ -1081,6 +1082,7 @@ C:/Users/Ollie Appleby/projects/spinvader/game.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qmargins.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qmath.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qmetacontainer.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qmetaobject.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qmetatype.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qminmax.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qnamespace.h
@@ -1136,6 +1138,7 @@ C:/Users/Ollie Appleby/projects/spinvader/game.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qurl.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h
@@ -1171,6 +1174,16 @@ C:/Users/Ollie Appleby/projects/spinvader/game.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/QAudioOutput
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/QMediaPlayer
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qaudiooutput.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qmediaenumdebug.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qmediaplayer.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtaudio.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsTextItem
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView
@@ -1387,6 +1400,7 @@ C:/Users/Ollie Appleby/projects/spinvader/game.h
  mdp:C:/Users/Ollie Appleby/projects/spinvader/score.h
  mdp:C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/moc_predefs.h
  mdp:C:/Users/Ollie Appleby/projects/spinvader/game.h
+ mdp:C:/Users/Ollie Appleby/projects/spinvader/health.h
 C:/Users/Ollie Appleby/projects/spinvader/mainwindow.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
@@ -1745,6 +1759,7 @@ C:/Users/Ollie Appleby/projects/spinvader/Bullet.cpp
 C:/Users/Ollie Appleby/projects/spinvader/Enemies.cpp
 C:/Users/Ollie Appleby/projects/spinvader/MyRect.cpp
 C:/Users/Ollie Appleby/projects/spinvader/game.cpp
+C:/Users/Ollie Appleby/projects/spinvader/health.cpp
 C:/Users/Ollie Appleby/projects/spinvader/main.cpp
 C:/Users/Ollie Appleby/projects/spinvader/mainwindow.cpp
  uic:./ui_mainwindow.h

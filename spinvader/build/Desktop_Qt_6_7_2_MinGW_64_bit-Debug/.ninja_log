@@ -1,0 +1,66 @@
+# ninja log v6
+87	792	7485732526991415	spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+87	792	7485732526991415	spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+87	792	7485732526991415	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+87	792	7485732526991415	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+4383	12130	7485729013555705	CMakeFiles/spinvader.dir/Bullet.cpp.obj	7b08a8968fbc956f
+794	6925	7485732534072831	CMakeFiles/spinvader.dir/mainwindow.cpp.obj	2e58c4c0c78beaa0
+135	156	7485572490658086	clean	577b940aee94fbd7
+2716	9482	7485572518846964	CMakeFiles/spinvader.dir/MyRect.cpp.obj	ac783b1aaf2fefc2
+4391	11986	7485729013631976	CMakeFiles/spinvader.dir/Enemies.cpp.obj	32742ba58368f16d
+4357	12125	7485729013289801	CMakeFiles/spinvader.dir/main.cpp.obj	995f15aa31a66002
+4350	12312	7485729013216231	CMakeFiles/spinvader.dir/spinvader_autogen/mocs_compilation.cpp.obj	9a0c34f000030465
+7204	8294	7485732598178254	spinvader.exe	30492f62abada075
+48	135	7485572489745223	CMakeFiles/clean.additional	baedbe210acaa455
+800	7204	7485732534104116	CMakeFiles/spinvader.dir/game.cpp.obj	3dde9b4386a1e77a
+1126	2699	7485572518408746	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+2747	9558	7485572519091155	CMakeFiles/spinvader.dir/score.cpp.obj	797c5015c1606c2a
+2753	9337	7485572519214392	CMakeFiles/spinvader.dir/health.cpp.obj	ab9e9379bcb7a8d8
+1126	2699	7485572518408746	spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+2762	53285	7485572519301204	CMakeFiles/spinvader.dir/spinvader_autogen/EWIEGA46WW/qrc_res.cpp.obj	3ce8e3c4dbd1af6e
+60	3555	7485732784429525	build.ninja	81ddf904efda2e66
+39	286	7485733005179302	spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+39	286	7485733005179302	spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+39	286	7485733005179302	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+39	286	7485733005179302	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+287	2203	7485733007721803	CMakeFiles/spinvader.dir/mainwindow.cpp.obj	2e58c4c0c78beaa0
+291	2517	7485733007765966	CMakeFiles/spinvader.dir/game.cpp.obj	3dde9b4386a1e77a
+2517	3575	7485733030025420	spinvader.exe	30492f62abada075
+49	111	7485734587604976	CMakeFiles/clean.additional	baedbe210acaa455
+111	150	7485734588305068	clean	577b940aee94fbd7
+40	1346	7485734602042590	spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+40	1346	7485734602042590	spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+40	1346	7485734602042590	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+40	1346	7485734602042590	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+1347	2965	7485734619243760	spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+1347	2965	7485734619243760	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+3034	8708	7485734620070502	CMakeFiles/spinvader.dir/health.cpp.obj	ab9e9379bcb7a8d8
+3027	8860	7485734619950433	CMakeFiles/spinvader.dir/score.cpp.obj	797c5015c1606c2a
+2996	9204	7485734619689150	CMakeFiles/spinvader.dir/MyRect.cpp.obj	ac783b1aaf2fefc2
+2976	9249	7485734619460768	CMakeFiles/spinvader.dir/mainwindow.cpp.obj	2e58c4c0c78beaa0
+3002	9580	7485734619762247	CMakeFiles/spinvader.dir/Enemies.cpp.obj	32742ba58368f16d
+2984	9613	7485734619576261	CMakeFiles/spinvader.dir/Bullet.cpp.obj	7b08a8968fbc956f
+2968	9776	7485734619413795	CMakeFiles/spinvader.dir/main.cpp.obj	995f15aa31a66002
+3019	9892	7485734619924627	CMakeFiles/spinvader.dir/game.cpp.obj	3dde9b4386a1e77a
+2965	9997	7485734619383851	CMakeFiles/spinvader.dir/spinvader_autogen/mocs_compilation.cpp.obj	9a0c34f000030465
+3039	53195	7485734620123038	CMakeFiles/spinvader.dir/spinvader_autogen/EWIEGA46WW/qrc_res.cpp.obj	3ce8e3c4dbd1af6e
+53195	54252	7485735121684820	spinvader.exe	30492f62abada075
+43	119	7485735362174891	CMakeFiles/clean.additional	baedbe210acaa455
+120	146	7485735362952034	clean	577b940aee94fbd7
+49	1419	7485735377247924	spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+49	1419	7485735377247924	spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+49	1419	7485735377247924	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/timestamp	2fb0ec14edc1dc8e
+49	1419	7485735377247924	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/mocs_compilation.cpp	2fb0ec14edc1dc8e
+1420	2994	7485735394145585	spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+1420	2994	7485735394145585	C:/Users/Ollie Appleby/projects/spinvader/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/spinvader_autogen/EWIEGA46WW/qrc_res.cpp	519c1823448ff34c
+3047	8754	7485735394828859	CMakeFiles/spinvader.dir/health.cpp.obj	ab9e9379bcb7a8d8
+3040	8761	7485735394815690	CMakeFiles/spinvader.dir/score.cpp.obj	797c5015c1606c2a
+3011	9133	7485735394490768	CMakeFiles/spinvader.dir/MyRect.cpp.obj	ac783b1aaf2fefc2
+3001	9161	7485735394421255	CMakeFiles/spinvader.dir/mainwindow.cpp.obj	2e58c4c0c78beaa0
+2998	9527	7485735394385407	CMakeFiles/spinvader.dir/main.cpp.obj	995f15aa31a66002
+3016	9589	7485735394577454	CMakeFiles/spinvader.dir/Enemies.cpp.obj	32742ba58368f16d
+3006	9771	7485735394450766	CMakeFiles/spinvader.dir/Bullet.cpp.obj	7b08a8968fbc956f
+2994	9777	7485735394359413	CMakeFiles/spinvader.dir/spinvader_autogen/mocs_compilation.cpp.obj	9a0c34f000030465
+3032	9788	7485735394725075	CMakeFiles/spinvader.dir/game.cpp.obj	3dde9b4386a1e77a
+3052	75596	7485735394923944	CMakeFiles/spinvader.dir/spinvader_autogen/EWIEGA46WW/qrc_res.cpp.obj	3ce8e3c4dbd1af6e
+75596	83077	7485736120368245	spinvader.exe	30492f62abada075
