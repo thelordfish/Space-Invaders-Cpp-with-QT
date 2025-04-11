@@ -12,6 +12,8 @@
 #include <QMediaPlayer>
 #include <QDebug>
 #include <QAudioOutput>
+#include "spriteselector.h"
+#include <QPixmap>
 
 extern Game* game; //makes it global and usable by any other file
 
@@ -20,6 +22,12 @@ Game::Game() : view(new QGraphicsView()), scene(new QGraphicsScene())  {
 
     scene->setSceneRect(0, 0, 800, 600); // Set the size of the scene
     view->setScene(scene); // Set the scene to the view
+  //  QPixmap bg = SpriteSelector::getRandomSprite(SpriteSelector::Background);
+    QPixmap bg(":/New/images/gardenbackground.png");
+    scene->setBackgroundBrush(QBrush(bg.scaled(scene->sceneRect().size().toSize())));
+
+
+
 
     // create a view to see the scene (done in header), no scroll bar,
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -67,6 +75,8 @@ void Game::Spawn()
         //create an enemy
         Enemy *enemy = new Enemy();
         scene->addItem(enemy);
+
+
 
     }
 

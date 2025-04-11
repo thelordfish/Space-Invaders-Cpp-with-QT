@@ -4,5 +4,32 @@
         <file>Sounds/enemy.mp3</file>
         <file>Sounds/wolololo.mp3</file>
         <file>Sounds/theme.mp3</file>
+        <file>images/cutlery1.png</file>
+        <file>images/cutlery2.png</file>
+        <file>images/cutlery3.png</file>
+        <file>images/cutlery4.png</file>
+        <file>images/cutlery5.png</file>
+        <file>images/cutlery6.png</file>
+        <file>images/cutlery7.png</file>
+        <file>images/cutlery8.png</file>
+        <file>images/cutlery9.png</file>
+        <file>images/jelly1.png</file>
+        <file>images/jelly2.png</file>
+        <file>images/jelly3.png</file>
+        <file>images/jelly4.png</file>
+        <file>images/jelly5.png</file>
+        <file>images/jely1.png</file>
+        <file>images/jeleh2.png</file>
+        <file>images/jeleh3.png</file>
+        <file>images/jeleh4.png</file>
+        <file>images/jeleh5.png</file>
+        <file>images/jeleh1.png</file>
+        <file>images/background1.png</file>
+        <file>images/background2.png</file>
+        <file>images/background3.png</file>
+        <file>images/background4.png</file>
+        <file>images/background5.png</file>
+        <file>images/background6.png</file>
+        <file>images/gardenbackground.png</file>
     </qresource>
 </RCC>

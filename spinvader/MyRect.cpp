@@ -22,10 +22,17 @@ void MyRect::keyPressEvent(QKeyEvent *event)
     // else if (event ->key() == Qt::Key_Down) {
     //     setPos(x(),y()+10);
     // }
+
+
+
     else if (event->key() == Qt::Key_Space) {
+
         // create a bullet
         Bullet *bullet = new Bullet();
-        bullet->setPos(x(), y());
+        qreal playerCenterX = x() + boundingRect().width() / 2;
+        qreal bulletOffset = bullet->pixmap().width() * bullet->scale() / 2;
+
+        bullet->setPos(playerCenterX - bulletOffset, y());
         scene()->addItem(bullet);
     }
 }

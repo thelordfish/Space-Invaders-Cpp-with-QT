@@ -9,6 +9,7 @@
 Game* game;
 
 int main(int argc, char *argv[]) {
+    srand(time(nullptr)); //seed random generator for background
 
     QApplication a(argc, argv); // Initialize QApplication
 

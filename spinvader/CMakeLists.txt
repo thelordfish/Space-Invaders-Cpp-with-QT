@@ -34,6 +34,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         health.h
         health.cpp
         res.qrc
+        spriteselector.h spriteselector.cpp
     )
 else()
     if(ANDROID)

@@ -6,68 +6,65 @@
 #include "Enemies.h"
 #include "game.h"
 #include "Score.h"
+#include "spriteselector.h"
+#include <QPixmap>
+
 
 extern Game* game;
 
-Bullet::Bullet()
+Bullet::Bullet() : defaultSpeed(10), currentSpeed(10)
 {
-    //drew the bullet
-    setRect(0,0,10,50);
-
-
+    //create random cutlery
+    setPixmap(SpriteSelector::getRandomSprite(SpriteSelector::Cutlery));
+    setScale(0.25);                                  // scale it down to match original size
+    setZValue(0);
 
     //connect
     QTimer* timer = new QTimer();
 
     //for every SIGNAL (a macro) of a certain amount of time, this will move
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
-
     timer->start(50);
 }
-
 void Bullet::move() {
-   // qDebug() << "bullet be movin";
-
-    //if bullet collides with enemy, destroy both
     QList<QGraphicsItem *> colliding_items = collidingItems();
-    for (int i =0, n = colliding_items.size(); i<n; i++) {
-      //  qDebug() << "for loop be startin";
 
-        if (typeid(*(colliding_items[i])) == typeid(Enemy)) {
-           // qDebug() << "Collision with Enemy detected";
+    for (int i = 0; i < colliding_items.size(); i++) {
+        QGraphicsItem* item = colliding_items[i];
 
-            // if (!game) {
-            //     qDebug() << "Error: 'game' is null!";
-            //     return;
-            // }
+        if (typeid(*item) == typeid(Enemy)) {
+            currentSpeed = defaultSpeed / 2;
 
-            // if (!game->score) {
-            //     qDebug() << "Error: 'game->score' is null!";
-            //     return;
-            // }
-            // qDebug() << "game:" << game << "score:" << game->score;
+            QTimer::singleShot(500, this, [=]() {
+                scene()->removeItem(item);
+                scene()->removeItem(this);
+                game->score->increase();
+                delete item;
+                delete this;
+            });
 
-            //increase score
-            game->score->increase();
-
-            //remove them both
-            scene()->removeItem(colliding_items[i]);
-            scene()->removeItem(this);
-
-            //delete them from the heap?
-            delete colliding_items[i];
-            delete this;
-            return;
+            return; // exit early — this bullet has a deletion in the torpedo bay that will destroy it when the singleShot delay is finished
         }
     }
 
-    //move bullet
-    setPos(x(), y()-10);
-    if (pos().y() + rect().height() < 0) {
+    // move the bullet
+    setPos(x(), y() - currentSpeed);
+
+    // delete bullet if it goes off screen
+    if (pos().y() + pixmap().height() < 0) {
         scene()->removeItem(this);
         delete this;
         //qDebug() << "Bullet deleted";
 
     }
-
 }
+
+
+
+
+
+
+
+
+
+
