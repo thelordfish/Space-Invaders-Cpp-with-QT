@@ -1,6 +1,6 @@
-# Witch's Garden (Space Invaders in C++ with Qt)
+# Space Invaders in C++ with Qt
 
-A botanical twist on the classic Space Invaders — written in C++ using Qt!
+A planty twist on the classic Space Invaders — written in C++ using Qt!
 
 At the moment you play as a magical square in a witches garden. A spell gone wrong has caused random coloured jellies of various sizes to fall from the sky. You must eat them before they hit the ground and ruin the plants.
 
