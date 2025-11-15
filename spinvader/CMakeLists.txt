@@ -14,9 +14,9 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets Multimed
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -25,16 +25,20 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         Bullet.h
         Bullet.cpp
-        MyRect.h
-        MyRect.cpp
+        Player.h
+        Player.cpp
         Enemies.h
         Enemies.cpp
-        game.h game.cpp
+
         score.h score.cpp
         health.h
         health.cpp
         res.qrc
         spriteselector.h spriteselector.cpp
+        GameDriver.h
+        GameDriver.cpp
+        GameWindow.h
+        GameWindow.cpp
     )
 else()
     if(ANDROID)

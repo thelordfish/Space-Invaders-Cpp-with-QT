@@ -13,6 +13,7 @@ class Bullet: public QObject, public QGraphicsPixmapItem{
 public:
     Bullet();
     QString getRandomCutlery();
+    void moveUp(float speed);
 
 private:
     int defaultSpeed;
@@ -22,7 +23,7 @@ private:
 
 public slots:           //a slot means a member function that can be connected to a signal
     //we've made a slot function called move here:
-    void move();
+    //void move();
 };
 
 #endif // BULLET_H

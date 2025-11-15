@@ -1,22 +1,14 @@
-#include <QGraphicsView>
-#include <QGraphicsItem>
-#include "qapplication.h"
-#include <QTimer>
-#include "game.h"
+#include "GameWindow.h"
+#include "GameDriver.h"
+#include <QApplication>
 
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
 
+    GameWindow* window = new GameWindow();
+    GameDriver* driver = new GameDriver(window);
 
-Game* game;
-
-int main(int argc, char *argv[]) {
-    srand(time(nullptr)); //seed random generator for background
-
-    QApplication a(argc, argv); // Initialize QApplication
-
-    //Game game;
-    // Initialize the global game pointer
-    game = new Game();  // Allocate memory for the game instance
-    //game->show();       // Show the game window
-
-    return a.exec();
+    window->show();
+    return app.exec();
 }

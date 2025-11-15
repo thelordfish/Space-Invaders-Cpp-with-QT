@@ -1,11 +1,11 @@
 
 
-#include "MyRect.h"
+#include "Player.h"
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include "Bullet.h"
 
-void MyRect::keyPressEvent(QKeyEvent *event)
+void Player::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Left) {
         if (pos().x() > 0)
@@ -27,14 +27,18 @@ void MyRect::keyPressEvent(QKeyEvent *event)
 
     else if (event->key() == Qt::Key_Space) {
 
-        // create a bullet
-        Bullet *bullet = new Bullet();
-        qreal playerCenterX = x() + boundingRect().width() / 2;
-        qreal bulletOffset = bullet->pixmap().width() * bullet->scale() / 2;
-
-        bullet->setPos(playerCenterX - bulletOffset, y());
-        scene()->addItem(bullet);
-    }
-}
+        emit shootBullet(); //emit a signal when it fires
 
 
+    //     // create a bullet
+    //     Bullet *bullet = new Bullet();
+    //     qreal playerCenterX = x() + boundingRect().width() / 2;
+    //     qreal bulletOffset = bullet->pixmap().width() * bullet->scale() / 2;
+
+    //     bullet->setPos(playerCenterX - bulletOffset, y());
+    //     scene()->addItem(bullet);
+    // }
+    };
+
+
+};

@@ -3,12 +3,11 @@
 #include <QGraphicsScene>
 #include <QTimer>
 #include <QPixmap>
-#include "game.h"
 #include <QList>
 #include <stdlib.h>
 #include "spriteselector.h"
 
-extern Game* game;
+
 
 Enemy::Enemy()
 {
@@ -50,12 +49,14 @@ void Enemy::move()
                  << "sceneHeight:" << scene()->height();
 
         //decrease health
-        game->health->decrease();
+        //game->health->decrease();
        // qDebug() << "health should decrease";
 
 
-        scene()->removeItem(this);
-        delete this;
+        if (scene()) scene()->removeItem(this);  //if (scene()) is seeing if this enemy is still in a scene or not, i.e. has it been deleted yet
+            setData(0, true);       // mark as "already being removed" using QGraphicsItem's "setData()" which lets you attach key-value data to any graphics item 0:True
+            deleteLater();          // defer destruction safely until after qt finishes the current loop iteration
+
        // qDebug() << "Enemy deleted";
     }
 }
