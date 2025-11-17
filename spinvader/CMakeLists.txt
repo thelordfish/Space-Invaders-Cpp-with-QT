@@ -39,6 +39,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         GameDriver.cpp
         GameWindow.h
         GameWindow.cpp
+        bulletsystem.h bulletsystem.cpp
+        enemysystem.h enemysystem.cpp
+        collisionsystem.h collisionsystem.cpp
     )
 else()
     if(ANDROID)

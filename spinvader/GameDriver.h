@@ -3,7 +3,7 @@
 #include "qmediaplayer.h"
 #include <QObject>
 #include <QPointer>
-#include <vector>
+#include "bulletsystem.h"
 
 class GameWindow;
 class QGraphicsScene;
@@ -40,11 +40,10 @@ private:
     QTimer* enemySpawner;
     QTimer* clockTimer;
 
-    std::vector<QPointer<Bullet>> bullets;
 
-    void registerBullet(Bullet* bullet);
-    void unregisterBullet(Bullet* bullet);
+    BulletSystem bulletSystem;
+
+
     void onPlayerShoot();
-    void updateAllBullets();
     void checkBulletCollisions();
 };

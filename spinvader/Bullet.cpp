@@ -3,27 +3,35 @@
 #include <QGraphicsScene>
 #include <QDebug>
 #include <QList>
-#include "spriteselector.h"
 #include <QPixmap>
+#include "Enemies.h"
 
 
 
-
-Bullet::Bullet() : defaultSpeed(10), currentSpeed(10)
+Bullet::Bullet(const QPixmap &sprite)
 {
+    // BulletSystem::registerBullet(this);
     //create random cutlery
-    setPixmap(SpriteSelector::getRandomSprite(SpriteSelector::Cutlery));
+    setPixmap(sprite);
     setScale(0.25);                                  // scale it down to match original size
     setZValue(0);
 
+    speed = -10.0f;
+    jellySpeedMultiplier = 0.92f;
+    collidedJelly = nullptr;
+
 }
 
-void Bullet::moveUp(float speed)
-{
-    setPos(x(), y() - speed);
+// void Bullet::moveUp(float speed)
+// {
+//     setPos(x(), y() - speed);
+// }
+
+
+
+void Bullet::setCollidedJelly(Enemy* enemy) {
+    collidedJelly = enemy;
 }
-
-
 
 
 

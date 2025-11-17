@@ -10,7 +10,7 @@
 #include <QBrush>
 #include <QPixmap>
 #include <QDebug>
-
+#include "SpriteSelector.h"
 #include "Player.h"
 #include "Enemies.h"
 #include "Score.h"
@@ -18,13 +18,16 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include <QUrl>
+#include "bulletsystem.h"
 
 GameDriver::GameDriver(GameWindow* window)
     : QObject(window),
     window(window),
-    scene(window->scene())
+    scene(window->scene()),
+    bulletSystem(scene)
 
 {
+
 
         // Create the player
     player = new Player();
@@ -59,7 +62,7 @@ GameDriver::GameDriver(GameWindow* window)
     scene->addItem(health);
 
 
-    // Central game loop timer (frame clock)
+        // Central game loop timer (frame clock)
     clockTimer = new QTimer(this);
     connect(                            //connect(sender, signal, receiver, slot) / connect(a, &A::signal, b, &B::slot); The sender and receiver are already pointers, the signal and slot must be made pointers using the &
         clockTimer,             //SENDER - clockTimer is the emitter
@@ -92,49 +95,23 @@ GameDriver::GameDriver(GameWindow* window)
     music->play();
 }
 
-void GameDriver::registerBullet(Bullet* bullet)
-{
-    bullets.push_back(bullet);
-}
 
-void GameDriver::unregisterBullet(Bullet* bullet)
-{
-    bullets.erase(
-        std::remove_if(bullets.begin(), bullets.end(),
-                       [&](const QPointer<Bullet>& p){ return p == bullet || p.isNull(); }),
-        bullets.end()
-        );
-}
+
 
 void GameDriver::onClock() {
-    updateAllBullets();
+    bulletSystem.moveAllBullets();
     checkBulletCollisions();
+    // enemySystem.update();
+    // collisionSystem.update();
 }
 
-void GameDriver::updateAllBullets()
-{
-    const float BULLET_SPEED = 10.0f; // You can tune this
 
-    for (QPointer<Bullet>& bullet : bullets)
-    {
-        if (!bullet) continue; // null if deleted
-
-        bullet->moveUp(BULLET_SPEED);
-
-        // Off-screen removal
-        if (bullet->y() < -50)  // out of scene
-        {
-            scene->removeItem(bullet);
-            delete bullet;
-            // unregister in destructor OR do:
-            unregisterBullet(bullet);
-        }
-    }
-}
 
 void GameDriver::checkBulletCollisions()
 {
-    for (QPointer<Bullet>& bullet : bullets)
+    std::vector<Bullet*> toDelete;
+
+    for ( Bullet* bullet : bulletSystem.bulletRegistry)
     {
         if (!bullet) continue;
 
@@ -146,29 +123,29 @@ void GameDriver::checkBulletCollisions()
             if (!enemy) continue;
 
             // hit!
+
+            // remove both if not jelly
             score->increase();
-
-            // remove both
+            toDelete.push_back(bullet);
             scene->removeItem(enemy);
-            scene->removeItem(bullet);
+            enemy->deleteLater(); //should probs turn this into a destroy function in the enemy system
 
-            delete enemy;
-            delete bullet;
 
             // bullet pointer auto-nullifies (QPointer) → safe
             break;
         }
     }
+    for (Bullet* bullet : toDelete)
+        bulletSystem.destroyBullet(bullet);
 }
-
-void GameDriver:: onPlayerShoot()
+void GameDriver::onPlayerShoot()
 {
-    Bullet* bullet = new Bullet();
+    Bullet* bullet = new Bullet(SpriteSelector::getRandomSprite(SpriteSelector::Cutlery));
     bullet->setPos(
         player->x() + player->rect().width()/2, //X ->accesses player's members, ->x() calls QGraphicsItem::x(). positioning bullet mid-player
         player->y());                           //Y
 
-    registerBullet(bullet);
+    bulletSystem.registerBullet(bullet);
     scene->addItem(bullet);
 }
 void GameDriver::spawnEnemy()

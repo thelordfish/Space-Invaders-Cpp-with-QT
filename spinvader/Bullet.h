@@ -3,6 +3,8 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
+#include "Enemies.h"
+
 //have to make this class support signals and slots:
 //1) make the class inherit from QObject, and
 //2) add the "MACRO" of Q_OBJECT
@@ -11,13 +13,19 @@ class Bullet: public QObject, public QGraphicsPixmapItem{
     Q_OBJECT
 
 public:
-    Bullet();
-    QString getRandomCutlery();
-    void moveUp(float speed);
+    Bullet(const QPixmap& sprite);
+
+    float speed = -10.0f;
+    float jellySpeedMultiplier = 0.92f;
+    bool inJelly = false;
+    Enemy* collidedJelly = nullptr;
+
+
+    void setCollidedJelly(Enemy* enemy);
+   // void moveSelfUp(float speed); //should be done by bulletSystem
 
 private:
-    int defaultSpeed;
-    int currentSpeed;
+
 
 
 

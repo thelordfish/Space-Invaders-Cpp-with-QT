@@ -16,6 +16,6 @@ GameWindow::GameWindow(QWidget* parent)
     m_scene->setSceneRect(0, 0, 800, 600);
 
     // Optional: background
-    // QPixmap bg(":/New/images/gardenbackground.png");
-    // m_scene->setBackgroundBrush(bg.scaled(m_scene->sceneRect().size().toSize()));
+    QPixmap bg(":/New/images/background5.png");
+    m_scene->setBackgroundBrush(bg.scaled(m_scene->sceneRect().size().toSize()));
 }
