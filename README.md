@@ -1,12 +1,11 @@
 # Space Invaders in C++ with Qt
 
-A planty twist on the classic Space Invaders — written in C++ using Qt!
+A jelly Space Invaders — written in C++ using Qt!
 
-At the moment you play as a magical square in a witches garden. A spell gone wrong has caused random coloured jellies of various sizes to fall from the sky. You must eat them before they hit the ground and ruin the plants.
+A spell gone wrong has caused random coloured jellies of various sizes to fall from the sky. You must eat them before they hit the ground. This is a space invaders game but with some jelly mechanics.
 
-To do:
-Add illustrations of yarrow, plaintain, dandelion, sorrel, hemlock, and various garden weeds, that explode with their name when hit. To help the user learn to identify plants.
 
+This started as a basic Space Invaders clone. A collision bug that slowed bullets inside enemies inspired a new direction: cutlery weapons and gooey, translucent jelly invaders that absorb hits before popping.
 
 ---
 
@@ -95,11 +94,7 @@ If CMake gives errors about mismatched source directories, it means you need to 
 
    - Press `Ctrl + R` or click the green Run button
 
----
 
-## Concept
-
-This started as a basic Space Invaders clone. A collision bug that slowed bullets inside enemies inspired the new direction: cutlery weapons and gooey, translucent jelly invaders that absorb hits before popping.
 
 ---
 

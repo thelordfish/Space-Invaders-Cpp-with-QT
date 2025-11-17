@@ -5,7 +5,7 @@
 #include <QList>
 #include <QPixmap>
 #include "Enemies.h"
-
+#include <QPointer>
 
 
 Bullet::Bullet(const QPixmap &sprite)
@@ -17,7 +17,7 @@ Bullet::Bullet(const QPixmap &sprite)
     setZValue(0);
 
     speed = -10.0f;
-    jellySpeedMultiplier = 0.92f;
+    jellySpeedMultiplier = 0.8f;
     collidedJelly = nullptr;
 
 }

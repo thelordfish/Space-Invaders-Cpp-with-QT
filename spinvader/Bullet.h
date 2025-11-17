@@ -4,7 +4,7 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 #include "Enemies.h"
-
+#include <QPointer>
 //have to make this class support signals and slots:
 //1) make the class inherit from QObject, and
 //2) add the "MACRO" of Q_OBJECT
@@ -18,7 +18,7 @@ public:
     float speed = -10.0f;
     float jellySpeedMultiplier = 0.92f;
     bool inJelly = false;
-    Enemy* collidedJelly = nullptr;
+    QPointer<Enemy> collidedJelly = nullptr; //crucial it is a qpointer, so it automatically updates to nullptr, when multiple cutlery hits the same jelly and holds reference to it after its deleted
 
 
     void setCollidedJelly(Enemy* enemy);

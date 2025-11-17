@@ -38,6 +38,10 @@ Enemy::Enemy()
 
 void Enemy::move()
 {
+    // If this enemy is no longer in a scene, bail out before touching scene()
+    if (!scene()) {
+        return;
+    }
     //move enemy down
     setPos(x(), y() + 5);
     //delete enemy once it's off the screen:
@@ -53,10 +57,11 @@ void Enemy::move()
        // qDebug() << "health should decrease";
 
 
-        if (scene()) scene()->removeItem(this);  //if (scene()) is seeing if this enemy is still in a scene or not, i.e. has it been deleted yet
-            setData(0, true);       // mark as "already being removed" using QGraphicsItem's "setData()" which lets you attach key-value data to any graphics item 0:True
-            deleteLater();          // defer destruction safely until after qt finishes the current loop iteration
-
+        if (scene()) {
+            scene()->removeItem(this);
+            setData(0, true);
+            deleteLater();
+        }
        // qDebug() << "Enemy deleted";
     }
 }

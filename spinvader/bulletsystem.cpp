@@ -3,7 +3,7 @@
 #include <QGraphicsScene>
 #include <list>
 #include <vector>
-
+#include <QPointer>
 
 BulletSystem::BulletSystem(QGraphicsScene* scenePtr)
     : scene(scenePtr)
@@ -37,14 +37,37 @@ void BulletSystem::moveAllBullets(){
         if (!bullet)
             continue; // null if deleted
 
-        bullet->setPos(bullet->x(), bullet->y() + bullet->speed); // move it up according to bullet speed
-
 
         // If the bullet is inside jelly, exponentially slow it
         if (bullet->inJelly)
         {
             bullet->speed *= bullet->jellySpeedMultiplier;
+
+            //if bullet is almost at standstill, remove bullet n jelleh
+            if (std::abs(bullet->speed) < 0.2f)
+            {
+                if (!bullet->collidedJelly || bullet->collidedJelly->scene() == nullptr) {
+                    qDebug() << "SAFE GUARD TRIGGERED: jelly gone for bullet" << static_cast<void*>(bullet);
+                }
+
+                else
+                {
+                    bullet->collidedJelly->scene()->removeItem(bullet->collidedJelly);
+                    bullet->collidedJelly->deleteLater();
+                }
+                //mark bullet for death
+                toDelete.push_back(bullet);
+                continue; //skip movement
+
+            }
+
         }
+
+
+
+        bullet->setPos(bullet->x(), bullet->y() + bullet->speed); // move it up according to bullet speed
+
+
 
         // Off-screen removal
         float bulletBottom = bullet->y() + bullet->pixmap().height() * bullet->scale();
@@ -55,7 +78,7 @@ void BulletSystem::moveAllBullets(){
         }
     }
 
-        // Second pass
+    // Second pass
     for (Bullet* bullet : toDelete)
         destroyBullet(bullet);
 

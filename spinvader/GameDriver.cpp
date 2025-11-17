@@ -1,3 +1,4 @@
+
 #include "GameDriver.h"
 #include "Bullet.h"
 #include "GameWindow.h"
@@ -29,23 +30,23 @@ GameDriver::GameDriver(GameWindow* window)
 {
 
 
-        // Create the player
+    // Create the player
     player = new Player();
     player->setRect(0,0,100,100);
     scene->addItem(player);
 
-        //Connect playerrs shoot bullet signals. Connect works like   connect(sender, signal, receiver, slot)
+    //Connect playerrs shoot bullet signals. Connect works like   connect(sender, signal, receiver, slot)
 
-// object A → sends A::signal → object B → calls function B::slot()
+    // object A → sends A::signal → object B → calls function B::slot()
 
 
     connect(
-    player,                 //SENDER -  a pointer to the emitter object, in this case the instance of my class "MyRect
-    &Player::shootBullet,   //SIGNAL - & is the memory address of Player::shootBullet which is the signal function. so it knows which signal is being referred to.
-    this,                   //RECEIVER - pointer to GameDriver (the receiver of the players emission)
-    &GameDriver::onPlayerShoot); //SLOT - create bullet
+        player,                 //SENDER -  a pointer to the emitter object, in this case the instance of my class "MyRect
+        &Player::shootBullet,   //SIGNAL - & is the memory address of Player::shootBullet which is the signal function. so it knows which signal is being referred to.
+        this,                   //RECEIVER - pointer to GameDriver (the receiver of the players emission)
+        &GameDriver::onPlayerShoot); //SLOT - create bullet
 
-        //trying to stop the frzen bug
+    //trying to stop the frzen bug
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
 
@@ -54,7 +55,7 @@ GameDriver::GameDriver(GameWindow* window)
         scene->height() - player->rect().height()           //set the top of the rect a player length above the bottom
         );
 
-        // Score & health
+    // Score & health
     score = new Score();
     health = new Health();
     health->setPos(0, 25);
@@ -62,7 +63,7 @@ GameDriver::GameDriver(GameWindow* window)
     scene->addItem(health);
 
 
-        // Central game loop timer (frame clock)
+    // Central game loop timer (frame clock)
     clockTimer = new QTimer(this);
     connect(                            //connect(sender, signal, receiver, slot) / connect(a, &A::signal, b, &B::slot); The sender and receiver are already pointers, the signal and slot must be made pointers using the &
         clockTimer,             //SENDER - clockTimer is the emitter
@@ -74,7 +75,7 @@ GameDriver::GameDriver(GameWindow* window)
     clockTimer->start(16);   // ≈ 60 FPS - QTimer will emit the timeout() signal every time its internal interval elapses, this will now trigger gameDriver's onClock
 
 
-        // Enemy spawner
+    // Enemy spawner
     QTimer* enemyTimer = new QTimer(this);
     connect(
         enemyTimer,                 //SENDER
@@ -85,7 +86,7 @@ GameDriver::GameDriver(GameWindow* window)
     enemyTimer->start(2000);
 
 
-        // Music
+    // Music
     music = new QMediaPlayer(this);
     audioOutput = new QAudioOutput(this);
 
@@ -124,11 +125,16 @@ void GameDriver::checkBulletCollisions()
 
             // hit!
 
-            // remove both if not jelly
-            score->increase();
-            toDelete.push_back(bullet);
-            scene->removeItem(enemy);
-            enemy->deleteLater(); //should probs turn this into a destroy function in the enemy system
+
+            bullet->inJelly = true;
+            bullet->setCollidedJelly(enemy);
+
+
+            // // remove both if not jelly
+            //score->increase();
+            // toDelete.push_back(bullet);
+            // scene->removeItem(enemy);
+            // enemy->deleteLater(); //should probs turn this into a destroy function in the enemy system
 
 
             // bullet pointer auto-nullifies (QPointer) → safe
