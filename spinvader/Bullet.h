@@ -3,7 +3,7 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
-#include "Enemies.h"
+#include "enemy.h"
 #include <QPointer>
 //have to make this class support signals and slots:
 //1) make the class inherit from QObject, and

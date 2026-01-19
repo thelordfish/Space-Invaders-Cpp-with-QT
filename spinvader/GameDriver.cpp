@@ -13,19 +13,21 @@
 #include <QDebug>
 #include "SpriteSelector.h"
 #include "Player.h"
-#include "Enemies.h"
+#include "enemy.h"
 #include "Score.h"
 #include "health.h"
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include <QUrl>
 #include "bulletsystem.h"
+#include "enemysystem.h"
 
 GameDriver::GameDriver(GameWindow* window)
     : QObject(window),
     window(window),
     scene(window->scene()),
-    bulletSystem(scene)
+    bulletSystem(scene),
+    enemySystem(scene)
 
 {
 
@@ -102,7 +104,7 @@ GameDriver::GameDriver(GameWindow* window)
 void GameDriver::onClock() {
     bulletSystem.moveAllBullets();
     checkBulletCollisions();
-    // enemySystem.update();
+    enemySystem.moveAllEnemies();
     // collisionSystem.update();
 }
 
@@ -158,4 +160,5 @@ void GameDriver::spawnEnemy()
 {
     Enemy* enemy = new Enemy();
     scene->addItem(enemy);
+    enemySystem.registerEnemy(enemy);
 }

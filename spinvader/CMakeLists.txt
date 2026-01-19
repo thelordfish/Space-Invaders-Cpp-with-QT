@@ -27,8 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Bullet.cpp
         Player.h
         Player.cpp
-        Enemies.h
-        Enemies.cpp
+        enemy.h
+        enemy.cpp
 
         score.h score.cpp
         health.h

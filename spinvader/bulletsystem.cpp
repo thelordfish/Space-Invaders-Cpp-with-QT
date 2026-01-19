@@ -52,8 +52,8 @@ void BulletSystem::moveAllBullets(){
 
                 else
                 {
-                    bullet->collidedJelly->scene()->removeItem(bullet->collidedJelly);
-                    bullet->collidedJelly->deleteLater();
+                    bullet->collidedJelly->toDelete = true;
+                    bullet->collidedJelly = nullptr;          // bullet must not keep a dangling pointer
                 }
                 //mark bullet for death
                 toDelete.push_back(bullet);

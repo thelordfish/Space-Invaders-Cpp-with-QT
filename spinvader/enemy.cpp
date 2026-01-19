@@ -1,4 +1,4 @@
-#include "Enemies.h"
+#include "enemy.h"
 #include <QDebug>
 #include <QGraphicsScene>
 #include <QTimer>
@@ -27,15 +27,11 @@ Enemy::Enemy()
     setOpacity(0.75);
     setZValue(1);
 
-    //connect
-    QTimer *timer = new QTimer(this);
-
-    //for every SIGNAL (a macro) of a certain amount of time, this will move
-    connect(timer, SIGNAL(timeout()), this, SLOT(move()));
-
-    timer->start(50);
 }
 
+void Enemy::markForDeletion(){
+    toDelete = true;
+};
 void Enemy::move()
 {
     // If this enemy is no longer in a scene, bail out before touching scene()
@@ -44,6 +40,7 @@ void Enemy::move()
     }
     //move enemy down
     setPos(x(), y() + 5);
+
     //delete enemy once it's off the screen:
     if (pos().y() + pixmap().height() *scale() > scene()->height()) {
         qDebug() << "health should decrease";
@@ -56,12 +53,12 @@ void Enemy::move()
         //game->health->decrease();
        // qDebug() << "health should decrease";
 
-
-        if (scene()) {
-            scene()->removeItem(this);
-            setData(0, true);
-            deleteLater();
-        }
-       // qDebug() << "Enemy deleted";
+        this->toDelete =true;
+        // if (scene()) {
+        //     scene()->removeItem(this);
+        //     setData(0, true); //way of marking it for deletion
+        //     //deleteLater();
+        // }
+        qDebug() << "Enemy toDelete = true";
     }
 }

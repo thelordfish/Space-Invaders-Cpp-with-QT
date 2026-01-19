@@ -4,7 +4,7 @@
 #include <QDebug>
 #include <QList>
 #include <QPixmap>
-#include "Enemies.h"
+#include "enemy.h"
 #include <QPointer>
 
 

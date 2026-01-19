@@ -1,5 +1,6 @@
 #pragma once
 
+#include "enemysystem.h"
 #include "qmediaplayer.h"
 #include <QObject>
 #include <QPointer>
@@ -42,6 +43,7 @@ private:
 
 
     BulletSystem bulletSystem;
+    EnemySystem enemySystem;
 
 
     void onPlayerShoot();
