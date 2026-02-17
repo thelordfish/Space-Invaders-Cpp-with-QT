@@ -1,20 +1,8 @@
 # Space Invaders in C++ with Qt
 
-A jelly Space Invaders — written in C++ using Qt!
+A jelly Space Invaders — written in C++ using Qt.
 
-A spell gone wrong has caused random coloured jellies of various sizes to fall from the sky. You must eat them before they hit the ground. This is a space invaders game but with some jelly mechanics.
-
-
-This started as a basic Space Invaders clone. A collision bug that slowed bullets inside enemies inspired a new direction: cutlery weapons and gooey, translucent jelly invaders that absorb hits before popping.
-
----
-
-## Features
-
-- Randomized projectile types (fork, knife, spoon)
-- Slowing effect when cutlery passes through jelly enemies
-- Sprite-based graphics using QGraphicsScene
-- Written in modular C++ with Qt 6
+A spell gone wrong has caused random coloured jellies of various sizes to fall from the sky. You must eat them before they hit the ground. 
 
 ---
 
@@ -26,15 +14,11 @@ This started as a basic Space Invaders clone. A collision bug that slowed bullet
 
 ---
 
-## Getting Started
-
 ### Prerequisites
 
 - **Qt 6.x** (Install from [qt.io](https://www.qt.io/download) or via the Qt Online Installer)
 - A C++ compiler (MinGW is bundled with the Qt installer on Windows)
 - **Qt Creator IDE** (strongly recommended)
-
----
 
 ---
 
@@ -115,6 +99,3 @@ https://github.com/thelordfish
 
 ---
 
-## License
-
-This project is open source under the MIT License.
